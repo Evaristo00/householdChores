@@ -1,4 +1,4 @@
-# HomeChoreses
+# HomeChores
 Gestión de tareas de casa en comunidad con microservicios en Spring Boot
 
 Este proyecto es una aplicación web que utiliza la arquitectura de microservicios para la gestión de tareas de una casa en comunidad..
