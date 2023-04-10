@@ -1,4 +1,4 @@
-package com.project.userservice.entity;
+package com.personservice.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,16 +8,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String mail;
-    private String phone;
+    private String password;
 }
+
