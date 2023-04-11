@@ -1,6 +1,7 @@
 package com.homeservice.controller;
 
 import com.homeservice.dto.HomeDto;
+import com.homeservice.dto.PersonDto;
 import com.homeservice.entity.Home;
 import com.homeservice.service.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,5 +45,19 @@ public class HomeController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Home> delete(@PathVariable("id") int id) throws Exception {
         return ResponseEntity.ok(homeService.delete(id));
+    }
+
+    /*
+     *
+     * PERSON CONTROLLER
+     *
+     * */
+
+    @GetMapping("person/{id}")
+    public ResponseEntity<List<PersonDto>> getAllPersons(@PathVariable("id") Integer id){
+        List<PersonDto> persons = homeService.getAllPersons(id);
+        if(persons == null)
+            return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(persons);
     }
 }
