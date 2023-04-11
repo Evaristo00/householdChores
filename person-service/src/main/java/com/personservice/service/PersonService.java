@@ -23,7 +23,7 @@ public class PersonService {
     }
 
     public Person save(PersonDto personDto){
-        Person person = new Person(null, personDto.getName(),personDto.getMail(),personDto.getPassword());
+        Person person = new Person(null, personDto.getName(),personDto.getMail(),personDto.getPassword(),personDto.getHouseId());
         return personRepository.save(person);
     }
 
@@ -34,6 +34,7 @@ public class PersonService {
         person.setName(personDto.getName());
         person.setMail(personDto.getMail());
         person.setPassword(personDto.getPassword());
+        person.setHouseId(personDto.getHouseId());
 
         return personRepository.save(person);
     }
@@ -44,5 +45,14 @@ public class PersonService {
         Person person = personRepository.findById(id).get();
         personRepository.delete(person);
         return person;
+    }
+
+    /*
+    *************
+    HOME SERVICES
+    *************
+    */
+    public List<Person> getPersoninHome(int id){
+        return personRepository.findByHouseId(id);
     }
 }

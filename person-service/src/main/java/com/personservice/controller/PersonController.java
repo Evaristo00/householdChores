@@ -45,4 +45,19 @@ public class PersonController {
     public ResponseEntity<Person> delete(@PathVariable("id") int id) throws Exception {
         return ResponseEntity.ok(personService.delete(id));
     }
+
+
+    /*
+    *************
+    HOME CONTROLLERS
+    *************
+    */
+
+    @GetMapping("house/{id}")
+    public ResponseEntity<List<Person>> getHouseById(@PathVariable int id){
+        List<Person> persons = personService.getPersoninHome(id);
+        if(persons.isEmpty())
+            return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(persons);
+    }
 }

@@ -1,6 +1,5 @@
-package com.personservice.dto;
+package com.homeservice.dto;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

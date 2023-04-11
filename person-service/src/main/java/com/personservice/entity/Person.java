@@ -20,5 +20,6 @@ public class Person {
     private String name;
     private String mail;
     private String password;
+    private Integer houseId;
 }
 
