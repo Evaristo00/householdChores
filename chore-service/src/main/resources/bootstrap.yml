@@ -5,7 +5,7 @@
 
 spring:
   application:
-    name: home-service
+    name: chore-service
   cloud:
     config:
       enable: true

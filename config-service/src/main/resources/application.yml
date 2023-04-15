@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8888
 spring:
   cloud:
     config:
@@ -7,9 +7,8 @@ spring:
         git:
           default-label: config-server
           uri: git@github.com:Evaristo00/householdChores.git
-          search-path: config-data
+          search-paths: config-data
           ssh-key:
             privateKey: C:\Users\evari\.ssh\id_rsa
-          clone-on-start: true
   application:
-    name: config-server
+    name: config-service
