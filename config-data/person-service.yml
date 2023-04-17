@@ -1,6 +1,8 @@
 server:
   port: 8003
 spring:
+  application:
+    name: person-service
   h2:
     console:
       path: /h2-console
