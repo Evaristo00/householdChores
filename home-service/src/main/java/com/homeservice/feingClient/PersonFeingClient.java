@@ -10,6 +10,6 @@ import java.util.List;
 @FeignClient(name = "person-service")
 public interface PersonFeingClient {
 
-    @GetMapping("house/{id}")
+    @GetMapping("person/house/{id}")
     List<PersonDto> getPersonsInHose(@PathVariable("id") Integer id);
 }
