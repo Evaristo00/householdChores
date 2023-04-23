@@ -29,3 +29,7 @@ spring:
           uri: lb://chore-service
           predicates:
             - Path=/chore/**
+        - id: security-service
+          uri: lb://security-service
+          predicates:
+            - Path=/auth/**
