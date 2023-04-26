@@ -21,16 +21,20 @@ spring:
           uri: lb://person-service
           predicates:
             - Path=/person/**
+          fliters:
+          - TokenRelay=
         - id: home-service
           uri: lb://home-service
           predicates:
             - Path=/home/**
+          fliters:
+          - TokenRelay=
         - id: chore-service
           uri: lb://chore-service
           predicates:
             - Path=/chore/**
-        fliters:
-        - TokenRelay=
+          fliters:
+          - TokenRelay=
 
   security:
     oauth2:
