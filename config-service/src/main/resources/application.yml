@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: main
+          default-label: oauth2
           uri: git@github.com:Evaristo00/householdChores.git
           search-paths: config-data
           ssh-key:
