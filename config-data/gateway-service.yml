@@ -36,10 +36,10 @@ spring:
           fliters:
           - TokenRelay=
 
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: 265931998525-4otunva4qu0el7jd1ohubh5png8de37i.apps.googleusercontent.com
-            client-secret: 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
+  # security:
+  #   oauth2:
+  #     client:
+  #       registration:
+  #         google:
+  #           client-id: 265931998525-4otunva4qu0el7jd1ohubh5png8de37i.apps.googleusercontent.com
+  #           client-secret: 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
