@@ -10,6 +10,24 @@ server:
 spring:
   application:
     name: authorization-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/user-database
+    username: user
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+
+#docker run --detach --env MYSQL_ROOT_PASSWORD=admin \
+#  --env MYSQL_USER=user \
+#  --env MYSQL_PASSWORD=admin \
+#  --env MYSQL_DATABASE=user-database \
+#  --name user \
+#  --publish 3306:3306 mysql:8-oracle
+
 logging:
   level:
     root: INFO
